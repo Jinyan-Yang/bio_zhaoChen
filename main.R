@@ -8,6 +8,9 @@ for(i in seq_along(fn.vec)){
   # read in the file
   tmp.df <- read.table(fn.vec[i])
   
+  # test of grep
+  index.spc <- grep('>HORV',tmp.df$V1)
+  
   # find the sequence 
   index.tmp.1 <- which(tmp.df$V1 == '>HORVU3Hr1G053910')
   
